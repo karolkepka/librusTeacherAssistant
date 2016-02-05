@@ -1,5 +1,22 @@
 {
-   "manifest_version": 2,
-   "name": "Librus teacher assistant",
-   "version": "0.1"
+	"manifest_version": 2,
+	"name": "Librus teacher assistant",
+	"version": "0.1",
+	//"permissions": [ "tabs", "https://*/*" ],
+	"content_scripts": [
+	{
+    	"matches": [
+      		"<all_urls>"
+    	],
+    	"js": ["jquery.min.js", "content.js"]
+  	}],
+  	"icons": {"128" : "128.png"},
+  	"browser_action": {
+          "default_title": "Librus teacher assistant",
+          "default_icon": "icon.png"
+    },
+    "background": {
+  		"scripts": ["background.js"]
+	}
+
 }

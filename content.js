@@ -1,0 +1,14 @@
+//alert("Hello from your Chrome extension! Content.js")
+
+
+// content.js
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+  	console.log("lama");
+    if( request.message === "clicked_browser_action" ) {
+      var firstHref = $("a[href^='http']").eq(0).attr("href");
+	  console.log("LAMA22");
+      console.log(firstHref);
+    }
+  }
+);
