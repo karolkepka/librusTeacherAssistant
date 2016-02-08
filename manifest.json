@@ -13,7 +13,8 @@
   	"icons": {"128" : "128.png"},
   	"browser_action": {
           "default_title": "Librus teacher assistant",
-          "default_icon": "icon.png"
+          "default_icon": "icon.png",
+          "default_popup": "popup.html"
     },
     "background": {
   		"scripts": ["background.js"]

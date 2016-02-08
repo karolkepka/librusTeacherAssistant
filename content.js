@@ -1,5 +1,4 @@
-//alert("Hello from your Chrome extension! Content.js")
-
+console.log("content.js script is running");
 
 // content.js
 chrome.runtime.onMessage.addListener(
@@ -9,6 +8,7 @@ chrome.runtime.onMessage.addListener(
       var firstHref = $("a[href^='http']").eq(0).attr("href");
 	  console.log("LAMA22");
       console.log(firstHref);
+      chrome.runtime.sendMessage({"message": "open_new_tab", "url": firstHref});
     }
   }
 );
